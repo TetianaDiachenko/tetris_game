@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let timerId;
   let score = 0;
   const colors = [
-    "limegreen",
+    "green",
     "red",
     "blue",
     "blueviolet",
-    "orange"
+    "brown"
   ];
 
   console.log(btnRotate);

@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let squares = Array.from(document.querySelectorAll(".grid div"));
   const scoreDisplay = document.querySelector("#score");
   const startBtn = document.querySelector("#start-button");
+  const btnRotate = document.querySelector(".btn-rotate");
+  const btnLeft = document.querySelector(".btn-aside__left");
+  const btnRight = document.querySelector(".btn-aside__right");
+  const btnDown = document.querySelector(".btn-down");
   const width = 10; // Number of DIVs across the display
   let nextRandom = 0;
   let timerId;
@@ -15,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "orange"
   ];
 
+  console.log(btnRotate);
 
   // The Tetrominoes
 
@@ -100,6 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   document.addEventListener("keyup", control);
+
+  // functionality for controls buttons
+  btnRotate.addEventListener("click", rotate);
+  btnLeft.addEventListener("click", moveLeft);
+  btnRight.addEventListener('click', moveRight);
+  btnDown.addEventListener('click', moveDown);
+
 
   // move down function
   function moveDown() {

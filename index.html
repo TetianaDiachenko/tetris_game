@@ -10,10 +10,11 @@
 </head>
 <body>
     <main> 
+        <h1>Tetris game</h1>
         <h3>Score:<span id="score">0</span></h3>
         <button id="start-button">Start/Pause</button>
-        <div class="container">
-            <div class="grid">
+        <section class="container">
+            <div class="grid container-left">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -225,26 +226,44 @@
                 <div class="taken"></div>
                 <div class="taken"></div>
             </div>
-
-            <div class="mini-grid">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+        
+            <div class="container-right">
+                <div class="mini-grid">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="operation">
+                    <button class="btn btn-rotate">
+                        <img src="icons/rotate_d_variant_icon_136261.png" alt="btn-rotate">
+                    </button>
+                    <div class="btn-aside">
+                        <button class="btn btn-aside__left">
+                            <img src="icons/arrow-left_icon-icons.com_72376.png" alt="btn-aside__left">
+                        </button>
+                        <button class="btn btn-aside__right">
+                            <img src="icons/arrow-right_icon-icons.com_72375.png" alt="btn-aside__right">
+                        </button>
+                    </div>
+                    <button class="btn btn-down">
+                        <img src="icons/arrow-down_icon-icons.com_72377.png" alt="btn-down">
+                    </button>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
     
 </body>

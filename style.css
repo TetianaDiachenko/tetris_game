@@ -39,6 +39,18 @@ main {
     background-color: yellow;
 }
 
+
+.operation {
+    margin-left: 4px;
+    margin-top: 10px;
+}
+
+.btn {
+    background-color: yellow;
+    margin-top: 10px;
+    
+}
+
 .mini-grid div {
     width: 20px;
     height: 20px;

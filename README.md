@@ -12,3 +12,8 @@
 * Your objective is to get all the blocks to fill all the empty space in a line at the bottom of the screen; whenever you do this, you’ll find that the blocks vanish and you get awarded +10 of Score.
 
 As the basis of the game I used the video [The Code Tetris: JavaScript Tutorial for Beginners](https://www.youtube.com/watch?v=rAUn1Lom6dw&list=PPSV)
+
+I changed the code and added:
+
+* controls buttons,
+* create grid not on the html, but with loop in js.

@@ -17,6 +17,17 @@ main {
     color: blue;
 }
 
+.speed-range {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.speed-range input {
+    margin: 0px 20px;
+}
+
 .container {    
     display: flex;
     justify-content: center;

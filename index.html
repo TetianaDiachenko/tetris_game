@@ -10,9 +10,18 @@
 </head>
 <body>
     <main> 
-        <h1>Tetris game</h1>
-        <h3>Score:<span id="score">0</span></h3>
-        <button id="start-button">Start/Pause</button>
+        <header>
+            <h1>Tetris game</h1>    
+            <h3>Score:<span id="score">0</span></h3>
+            <h3>Speed</h3>
+            <div class="speed">            
+                <label for="speed">Slow</label>
+                <input type="range" id="speed" min="500" max="1500" >
+                <label for="speed">Fast</label>
+            </div>            
+            <button id="start-button">Start/Pause</button>
+        </header>
+
         <section class="container">
             <div class="grid container-left">
             </div>

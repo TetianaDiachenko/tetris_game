@@ -7,6 +7,17 @@ main {
     margin: 0 auto;
 }
 
+.speed {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.speed input {
+    margin: 0px 20px;
+} 
+
 .container {    
     display: flex;
     justify-content: center;

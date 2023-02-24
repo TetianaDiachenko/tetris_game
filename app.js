@@ -271,11 +271,18 @@ document.addEventListener('DOMContentLoaded', () => {
       timerId = null;
     } else {
       draw();
-      timerId = setInterval(moveDown, 1000);
+      timerId = setInterval(moveDown, addSpeed());
       nextRandom = Math.floor(Math.random() * theTetrominoes.length);
       displayShape();
     }
   });
+
+  //add speed
+  function addSpeed() {
+    let data = document.querySelector("#speed").value;
+    console.log(data)
+    return data;
+  }
 
   // add score
   function addScore() {

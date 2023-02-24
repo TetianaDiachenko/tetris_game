@@ -16,4 +16,5 @@ As the basis of the game I used the video [The Code Tetris: JavaScript Tutorial 
 I changed the code and added:
 
 * controls buttons,
+* range speed,
 * create grid not on the html, but with loop in js.

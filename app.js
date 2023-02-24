@@ -11,26 +11,44 @@ document.addEventListener('DOMContentLoaded', () => {
   let timerId;
   let score = 0;
   const colors = ["green", "red", "blue", "blueviolet", "brown"];
+  // const WIDTH = 14;
+  // const HEIGHT = 16;
+  // const AREA = WIDTH * HEIGHT;
 
   // Create grid board
-  function createBoard(board) {
-    for (let i = 0; i < 200; i++) {
-      const board = document.createElement("div");
-      grid.appendChild(board);
-    }
-    return board;
-  }
-  createBoard();
+    function creatDivs(parentBlock, numDivs, className) {
+      for (let i = 0; i < numDivs; i++) {
+        const divs = document.createElement("div");
+        divs.classList.add(className);
+        if (className === undefined) {
+          divs.classList.remove(className);
+        }
+        parentBlock.appendChild(divs);
+      }
 
-  function creatBoardTaken(boardTaken) {
-    for (let i = 0; i < 10; i++) {
-      const boardTaken = document.createElement("div");
-      boardTaken.className = "taken";
-      grid.appendChild(boardTaken);
+      return divs;
     }
-    return boardTaken;
-  }
-  creatBoardTaken();
+  creatDivs(grid, 200);
+  creatDivs(grid, 10, 'taken');
+
+  // function createBoard(board) {
+  //   for (let i = 0; i < 200; i++) {
+  //     const board = document.createElement("div");
+  //     grid.appendChild(board);
+  //   }
+  //   return board;
+  // }
+  // createBoard();
+
+  // function creatBoardTaken(boardTaken) {
+  //   for (let i = 0; i < 10; i++) {
+  //     const boardTaken = document.createElement("div");
+  //     boardTaken.className = "taken";
+  //     grid.appendChild(boardTaken);
+  //   }
+  //   return boardTaken;
+  // }
+  // creatBoardTaken();
 
   let squares = Array.from(document.querySelectorAll(".grid div"));
 
@@ -211,14 +229,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const displayIndex = 0;
 
   // Create mini-grid board
-  function createMiniBoard(miniBoard) {
-    for (let i = 0; i < 16; i++) {
-      const miniBoard = document.createElement("div");
-      miniGrid.appendChild(miniBoard);
-    }
-    return miniBoard;
-  }
-  createMiniBoard();
+   creatDivs(miniGrid, 16);
+  // function createMiniBoard(miniBoard) {
+  //   for (let i = 0; i < 16; i++) {
+  //     const miniBoard = document.createElement("div");
+  //     miniGrid.appendChild(miniBoard);
+  //   }
+  //   return miniBoard;
+  // }
+  // createMiniBoard();
   const displaySquares = document.querySelectorAll(".mini-grid div");
 
   // the Tetrominoes without rotations

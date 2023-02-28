@@ -19,9 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function creatDivs(parentBlock, numDivs, className) {
       for (let i = 0; i < numDivs; i++) {
         const divs = document.createElement("div");
-        divs.classList.add(className);
-        if (className === undefined) {
-          divs.classList.remove(className);
+        if (className !== undefined) {
+          divs.classList.add(className);
         }
         parentBlock.appendChild(divs);
       }

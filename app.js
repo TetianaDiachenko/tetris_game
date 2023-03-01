@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
         squares[currentPosition + index].classList.contains("taken")
       )
     ) {
-      scoreDisplay.innerText = "THE END";
+      scoreDisplay.innerText = "The END";
       clearInterval(timerId);
     }
   }

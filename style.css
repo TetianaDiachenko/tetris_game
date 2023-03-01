@@ -1,6 +1,9 @@
 main {
     text-align: center;
 }
+h1 {
+    font-size: 1.5em;
+}
 
 #start-button {
     display: block;
@@ -31,7 +34,7 @@ main {
 .container {    
     display: flex;
     justify-content: center;
-    margin: 30px auto;
+    margin: 30px auto 0px;
 }
 
 .grid {

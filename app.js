@@ -18,36 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Create grid board
     function creatDivs(parentBlock, numDivs, className) {
       for (let i = 0; i < numDivs; i++) {
-        const divs = document.createElement("div");
+        let divs = document.createElement("div");
         if (className !== undefined) {
           divs.classList.add(className);
         }
         parentBlock.appendChild(divs);
+        console.log(className);
       }
-
-      return divs;
     }
   creatDivs(grid, 200);
   creatDivs(grid, 10, 'taken');
-
-  // function createBoard(board) {
-  //   for (let i = 0; i < 200; i++) {
-  //     const board = document.createElement("div");
-  //     grid.appendChild(board);
-  //   }
-  //   return board;
-  // }
-  // createBoard();
-
-  // function creatBoardTaken(boardTaken) {
-  //   for (let i = 0; i < 10; i++) {
-  //     const boardTaken = document.createElement("div");
-  //     boardTaken.className = "taken";
-  //     grid.appendChild(boardTaken);
-  //   }
-  //   return boardTaken;
-  // }
-  // creatBoardTaken();
 
   let squares = Array.from(document.querySelectorAll(".grid div"));
 
@@ -187,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ) {
       currentPosition += 1;
     }
-
     draw();
   }
 
@@ -197,9 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isAtRightEdge = current.some(
       (index) => (currentPosition + index) % width === width - 1
     );
-
     if (!isAtRightEdge) currentPosition += 1;
-
     if (
       current.some((index) =>
         squares[currentPosition + index].classList.contains("taken")
@@ -229,14 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Create mini-grid board
    creatDivs(miniGrid, 16);
-  // function createMiniBoard(miniBoard) {
-  //   for (let i = 0; i < 16; i++) {
-  //     const miniBoard = document.createElement("div");
-  //     miniGrid.appendChild(miniBoard);
-  //   }
-  //   return miniBoard;
-  // }
-  // createMiniBoard();
+
   const displaySquares = document.querySelectorAll(".mini-grid div");
 
   // the Tetrominoes without rotations
